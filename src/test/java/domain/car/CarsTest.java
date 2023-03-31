@@ -1,4 +1,6 @@
-package domain;
+package domain.car;
+
+import domain.random.RangeRandomValueGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
