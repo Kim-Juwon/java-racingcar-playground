@@ -1,10 +1,12 @@
-package domain;
+package domain.car;
+
+import domain.random.RandomValueGenerator;
 
 public class Car {
     private static final int MINIMUM_VALUE_TO_MOVE = 4;
 
     private final RandomValueGenerator randomValueGenerator;
-    private String name;
+    private final String name;
     private int location;
 
     private Car(RandomValueGenerator randomValueGenerator, String name) {
@@ -14,6 +16,10 @@ public class Car {
 
     public static Car of(RandomValueGenerator randomValueGenerator, String name) {
         return new Car(randomValueGenerator, name);
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getLocation() {
@@ -26,8 +32,16 @@ public class Car {
         }
     }
 
+    public boolean hasSameLocation(int location) {
+        return this.location == location;
+    }
+
     private boolean meetConditionToMove() {
-        return randomValueGenerator.generate() >= MINIMUM_VALUE_TO_MOVE;
+        return generateRandomNumber() >= MINIMUM_VALUE_TO_MOVE;
+    }
+
+    private int generateRandomNumber() {
+        return randomValueGenerator.generate();
     }
 
     private void move() {
