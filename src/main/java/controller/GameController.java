@@ -1,6 +1,6 @@
-package game;
+package controller;
 
-import controller.RacingCarGameService;
+import service.RacingCarGameService;
 import service.GameService;
 
 public class GameController {

@@ -1,4 +1,4 @@
-package domain;
+package domain.constant;
 
 public class GameConstant {
     public static final int MAXIMUM_DIGITS_OF_ATTEMPT_COUNT = 5;

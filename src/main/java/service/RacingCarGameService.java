@@ -1,10 +1,9 @@
-package controller;
+package service;
 
 import domain.car.Cars;
 import exception.IllegalInputException;
-import service.GameService;
-import view.Reader;
-import view.Writer;
+import io.Reader;
+import io.Writer;
 
 import java.util.stream.IntStream;
 

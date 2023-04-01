@@ -1,6 +1,6 @@
-package view;
+package io;
 
-import domain.GameConstant;
+import domain.constant.GameConstant;
 import exception.ExceptionMessage;
 import exception.IllegalInputException;
 

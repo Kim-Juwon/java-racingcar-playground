@@ -1,8 +1,7 @@
-package view;
+package io;
 
 import domain.car.Car;
 import domain.car.Cars;
-import exception.IllegalInputException;
 
 import java.util.List;
 import java.util.stream.Collectors;
