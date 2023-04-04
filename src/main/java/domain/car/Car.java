@@ -1,17 +1,18 @@
 package domain.car;
 
 import domain.random.RandomValueGenerator;
+import domain.wrapper.Name;
 
 public class Car {
     private static final int MINIMUM_VALUE_TO_MOVE = 4;
 
     private final RandomValueGenerator randomValueGenerator;
-    private final String name;
+    private final Name name;
     private int location;
 
-    private Car(RandomValueGenerator randomValueGenerator, String name) {
+    private Car(RandomValueGenerator randomValueGenerator, String nameString) {
         this.randomValueGenerator = randomValueGenerator;
-        this.name = name;
+        this.name = Name.from(nameString);
     }
 
     public static Car of(RandomValueGenerator randomValueGenerator, String name) {
@@ -19,7 +20,7 @@ public class Car {
     }
 
     public String getName() {
-        return name;
+        return name.getName();
     }
 
     public int getLocation() {
