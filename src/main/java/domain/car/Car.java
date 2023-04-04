@@ -1,6 +1,7 @@
 package domain.car;
 
 import domain.random.RandomValueGenerator;
+import domain.wrapper.Location;
 import domain.wrapper.Name;
 
 public class Car {
@@ -8,7 +9,7 @@ public class Car {
 
     private final RandomValueGenerator randomValueGenerator;
     private final Name name;
-    private int location;
+    private final Location location = Location.createWithZero();
 
     private Car(RandomValueGenerator randomValueGenerator, String nameString) {
         this.randomValueGenerator = randomValueGenerator;
@@ -24,7 +25,7 @@ public class Car {
     }
 
     public int getLocation() {
-        return location;
+        return location.getLocation();
     }
 
     public void attemptToMove() {
@@ -33,8 +34,8 @@ public class Car {
         }
     }
 
-    public boolean hasSameLocation(int location) {
-        return this.location == location;
+    public boolean hasSameLocation(int locationValue) {
+        return location.hasSameLocation(locationValue);
     }
 
     private boolean meetConditionToMove() {
@@ -46,6 +47,6 @@ public class Car {
     }
 
     private void move() {
-        ++location;
+        location.addOne();
     }
 }
