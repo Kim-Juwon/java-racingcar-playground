@@ -13,10 +13,6 @@ public class DigitRandomValueGenerator implements RandomValueGenerator {
 
     @Override
     public int generate() {
-        return generateRandomValueInRange();
-    }
-
-    public int generateRandomValueInRange() {
         return random.nextInt(MAX + 1);
     }
 }

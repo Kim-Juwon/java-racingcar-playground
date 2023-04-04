@@ -26,10 +26,6 @@ public class RangeRandomValueGenerator implements RandomValueGenerator {
 
     @Override
     public int generate() {
-        return generateRandomValueInRange();
-    }
-
-    private int generateRandomValueInRange() {
         return random.nextInt(max - min + ONE) + min;
     }
 }
