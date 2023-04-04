@@ -29,7 +29,7 @@ public class Car {
     }
 
     public void attemptToMove() {
-        if (meetConditionToMove()) {
+        if (canMove()) {
             move();
         }
     }
@@ -38,7 +38,7 @@ public class Car {
         return location.hasSameLocation(locationValue);
     }
 
-    private boolean meetConditionToMove() {
+    private boolean canMove() {
         return generateRandomNumber() >= MINIMUM_VALUE_TO_MOVE;
     }
 
