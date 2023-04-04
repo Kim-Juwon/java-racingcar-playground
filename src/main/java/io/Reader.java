@@ -20,7 +20,7 @@ public class Reader {
     }
 
     public List<String> readCarNames() {
-        String string = removeWhitespacesOnBothSidesFrom(readOneLine());
+        String string = readOneLine().trim();
         String[] dividedStrings = getDividedStringsFrom(string);
 
         return Arrays.stream(dividedStrings)
@@ -29,11 +29,7 @@ public class Reader {
     }
 
     public int readAttemptCount() {
-        return toInt(removeWhitespacesOnBothSidesFrom(readOneLine()));
-    }
-
-    private String removeWhitespacesOnBothSidesFrom(String string) {
-        return string.trim();
+        return toInt(readOneLine().trim());
     }
 
     private String readOneLine() {
