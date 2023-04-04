@@ -15,10 +15,10 @@ class CarsTest {
     @BeforeEach
     void initialize() {
         cars = Cars.from(List.of(
-                Car.of(RangeRandomValueGenerator.from(0, 3), "car1"),
-                Car.of(RangeRandomValueGenerator.from(4, 9), "car2"),
-                Car.of(RangeRandomValueGenerator.from(0, 3), "car3"),
-                Car.of(RangeRandomValueGenerator.from(4, 9), "car4")
+                Car.of(RangeRandomValueGenerator.of(0, 3), "car1"),
+                Car.of(RangeRandomValueGenerator.of(4, 9), "car2"),
+                Car.of(RangeRandomValueGenerator.of(0, 3), "car3"),
+                Car.of(RangeRandomValueGenerator.of(4, 9), "car4")
         ));
     }
 

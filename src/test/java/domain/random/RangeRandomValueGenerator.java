@@ -20,7 +20,7 @@ public class RangeRandomValueGenerator implements RandomValueGenerator {
      * @param max 랜덤으로 부여될 수 있는 최대 정수
      * @return min,max 값이 세팅된 RangeRandomValueGenerator 인스턴스
      */
-    public static RangeRandomValueGenerator from(int min, int max) {
+    public static RangeRandomValueGenerator of(int min, int max) {
         return new RangeRandomValueGenerator(min, max);
     }
 
