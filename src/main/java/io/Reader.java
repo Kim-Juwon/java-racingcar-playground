@@ -4,7 +4,10 @@ import domain.constant.GameConstant;
 import exception.ExceptionMessage;
 import exception.IllegalInputException;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Reader {
