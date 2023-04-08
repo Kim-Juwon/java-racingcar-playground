@@ -24,7 +24,7 @@ class CarsTest {
 
     @Test
     @DisplayName("attemptToMove() - 랜덤 값이 4 미만이면 location 변화 불가, 4 이상이면 location 1 증가")
-    void attemptToMove_LocationShouldChangeCorrectlyWhenCarsAttemptToMove() {
+    void attemptToMove_ChangePositionBasedOnCondition() {
         // given
         List<Car> beforeCars = cars.getCars();
         Car beforeCar1 = beforeCars.get(0);
