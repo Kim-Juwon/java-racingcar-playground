@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CarTest {
     @RepeatedTest(3)
     @DisplayName("attemptToMove() - 랜덤 값이 4 미만이면 location 변화 불가")
-    void attemptToMove_LocationShouldNotChangeWhenRandomValueLessThanFour() {
+    void attemptToMove_NotChangeLocation() {
         // given
         Car car = Car.of(RangeRandomValueGenerator.of(0, 3), "test car");
         int beforeLocation = car.getLocation();
@@ -24,7 +24,7 @@ class CarTest {
 
     @RepeatedTest(3)
     @DisplayName("attemptToMove() - 랜덤 값이 4 이상이면 location 1 증가")
-    void attemptToMove_LocationShouldIncreaseByOneWhenRandomValueFourOrHigher() {
+    void attemptToMove_IncreaseLocation() {
         // given
         Car car = Car.of(RangeRandomValueGenerator.of(4, 9), "test car");
         int beforeLocation = car.getLocation();
